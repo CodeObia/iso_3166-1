@@ -6,7 +6,7 @@ exports.get = void 0;
 (async () => {
     const iso_3166_1 = await require('./iso_3166-1.json');
     /**
-     Get country by ISO 3166-1 Alpha-2, ISO 3166-1 Alpha-3, ISO 3166-1 Numeric, country name or official name
+     Get country by ISO 3166-1 Alpha-2, ISO 3166-1 Alpha-3, ISO 3166-1 Numeric, country name, common name or official name
      *
      * @param {CountryQuery} CountryQuery
      * @returns {Country[] | Country | null}
@@ -35,6 +35,12 @@ exports.get = void 0;
                 }
                 if (CountryQuery?.name) {
                     match = country?.name.toLowerCase() === CountryQuery.name.toLowerCase();
+                    if (match) {
+                        return match;
+                    }
+                }
+                if (CountryQuery?.common_name) {
+                    match = country?.common_name === CountryQuery.common_name;
                     if (match) {
                         return match;
                     }
