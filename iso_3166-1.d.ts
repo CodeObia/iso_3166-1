@@ -3,6 +3,7 @@ export interface Country {
     alpha_3: string;
     numeric: string;
     name: string;
+    common_name?: string;
     official_name?: string;
     flag: string;
 }
@@ -14,5 +15,6 @@ export interface CountryQuery {
     alpha_3?: string;
     numeric?: string;
     name?: string;
+    common_name?: string;
     official_name?: string;
 }
