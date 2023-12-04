@@ -15,38 +15,38 @@ exports.get = void 0;
         if (CountryQuery) {
             const match = iso_3166_1['3166-1'].find((country) => {
                 let match = null;
-                if (CountryQuery?.alpha_2) {
-                    match = country?.alpha_2.toLowerCase() === CountryQuery.alpha_2.toLowerCase();
+                if (country?.alpha_2 && CountryQuery?.alpha_2) {
+                    match = country.alpha_2.trim().toLowerCase() === CountryQuery.alpha_2.trim().toLowerCase();
                     if (match) {
                         return match;
                     }
                 }
-                if (CountryQuery?.alpha_3) {
-                    match = country?.alpha_3.toLowerCase() === CountryQuery.alpha_3.toLowerCase();
+                if (country?.alpha_3 && CountryQuery?.alpha_3) {
+                    match = country.alpha_3.trim().toLowerCase() === CountryQuery.alpha_3.trim().toLowerCase();
                     if (match) {
                         return match;
                     }
                 }
-                if (CountryQuery?.numeric) {
-                    match = country?.numeric === CountryQuery.numeric;
+                if (country?.numeric && CountryQuery?.numeric) {
+                    match = Number(country.numeric) === Number(CountryQuery.numeric);
                     if (match) {
                         return match;
                     }
                 }
-                if (CountryQuery?.name) {
-                    match = country?.name.toLowerCase() === CountryQuery.name.toLowerCase();
+                if (country?.name && CountryQuery?.name) {
+                    match = country.name.trim().toLowerCase() === CountryQuery.name.trim().toLowerCase();
                     if (match) {
                         return match;
                     }
                 }
-                if (CountryQuery?.common_name) {
-                    match = country?.common_name === CountryQuery.common_name;
+                if (country?.common_name && CountryQuery?.common_name) {
+                    match = country.common_name.trim().toLowerCase() === CountryQuery.common_name.trim().toLowerCase();
                     if (match) {
                         return match;
                     }
                 }
-                if (CountryQuery?.official_name) {
-                    match = country?.official_name === CountryQuery.official_name;
+                if (country?.official_name && CountryQuery?.official_name) {
+                    match = country.official_name.trim().toLowerCase() === CountryQuery.official_name.trim().toLowerCase();
                     if (match) {
                         return match;
                     }

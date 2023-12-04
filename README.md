@@ -3,7 +3,7 @@
 The list of countries and codes are downloaded from
 https://salsa.debian.org/iso-codes-team/iso-codes/-/blob/main/data/iso_3166-1.json
 
-> Get countries information with ISO 3166-1 alpha-2, ISO 3166-1 alpha-3 and ISO 3166-1 numeric, name, official name and flag
+> Get countries information with ISO 3166-1 alpha-2, ISO 3166-1 alpha-3 and ISO 3166-1 numeric, name and official name
 
 ## Installation
 
