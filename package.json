@@ -1,6 +1,6 @@
 {
   "name": "@mohammad231/iso_3166-1",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Countries iso_3166-1 from https://salsa.debian.org/iso-codes-team/iso-codes",
   "main": "index.js",
   "types": "index.d.ts",
